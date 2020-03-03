@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Pattern Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/site.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+        <script src="js/d3.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/path-data-polyfill.js"></script>
+        <script src="js/pattern_lib.js"></script>
+        <script src="js/g1.js"></script>
+    </head>
+    <body>
+        <div id="header" class="container">
+            <div class="row">
+                <div class="col-xs-12"><img id="pattern_logo" src="/images/pattern-project.png" alt="projetpatternlogo" /><div id="headertext"><p>Anna Range</p></div></div>
+            </div>
+        </div>
+        <div id="page" class="container">
+            <div class="row">
+            <div id="clothes_preview" class="col-md-6"></div>
+            <div class="col-md-3">
+                <p class="subheader2">Size</p>
+                    <select class="dropdown">
+                        <option>6</option>
+                        <option>8</option>
+                        <option>10</option>
+                        <option>12</option>
+                        <option>14</option>
+                        <option>16</option>
+                        <option>18</option>
+                    </select>                
+                <p class="subheader2">Cloth</p>
+                <select id="clothproducer" class="dropdown">
+                    <option value="GNOS">Littendale</option>
+                    <option value="EFC">English Fine Cotton</option>
+                </select>
+                <p class="subheader2">Colour</p>
+                <p id="colorGNOS" class="colorgroup">
+                    <i class="colorchoice" data-value="color1GNOS"></i><i class="colorchoice" data-value="color2GNOS"></i><i class="colorchoice" data-value="color3GNOS"></i><i class="colorchoice" data-value="color4GNOS"></i><i class="colorchoice" data-value="color5GNOS"></i><i class="colorchoice" data-value="color6GNOS"></i>
+                </p>
+                <p id="colorEFC" class="colorgroup">
+                    <i class="colorchoice" data-value="color1EFC"></i>
+                </p>
+                <p class="subheader">Make it your own</p>
+                <p class="subheader2">Sleeves: <span id="sleeveout">Combined</span></p>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="2" value="1" class="sliderrange" id="sleeves">
+                </div>
+                <p class="subheader2">Length: <span id="lengthout">Medium</span></p>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="2" value="1" class="sliderrange" id="length">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <table>
+                    <tr>
+                        <td><p class="subheader2">Difficult: </p></td>
+                        <td><p id="difficultyout"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="subheader2">Cost: </p></td>
+                        <td><p id="costout"></p></td>
+                    </tr>                    
+                </table>
+                <p><button class="btn btn-primary addbasket">Add to Basket</button></p></div>
+            </div>
+        </div>
+        <script src="js/site.js"></script> 
+    </body>
+</html>
